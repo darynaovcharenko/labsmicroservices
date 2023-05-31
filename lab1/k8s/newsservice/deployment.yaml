@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: newsservice-deployment
+spec:
+  replicas: 1                      # кількість екземплярів Pod, що буде створено цим Deployment
+  selector:
+    matchLabels:
+      app: newsservice                # селектор по якому Deployment зв'язаний з Pod
+  template:
+    metadata:
+      labels:
+        app: newsservice               # мітка Pod по якому вона буде зв'язана з Deployment та Service
+    spec:
+      containers:
+        - image: daryna04/newsservice:01       # образ Dockerl
+          name: newsservice           # ім'я контейнеру
+          ports:
+            - containerPort: 8081  # порт по якому можна звертатись до поди

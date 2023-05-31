@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: books-node-app-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /books
+            pathType: "Prefix"
+            backend:
+              service:
+                name: books-node-app-service
+                port:
+                  number: 80

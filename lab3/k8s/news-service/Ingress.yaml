@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: news-node-app-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /news
+            pathType: "Prefix"
+            backend:
+              service:
+                name: news-node-app-service
+                port:
+                  number: 80
