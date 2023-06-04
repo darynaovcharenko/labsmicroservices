@@ -174,7 +174,7 @@ function App() {
 
   return (
       <div>
-        <h1>News Articles</h1>{news.length>0?
+        <h1>News Articles</h1>
         <ul>
           {news.map((article) => (
               <li key={article.id}>
@@ -213,7 +213,7 @@ function App() {
                 )}
               </li>
           ))}
-        </ul>:null}
+        </ul>
         <h2>Create New Article</h2>
         <input
             type="text"
@@ -240,7 +240,7 @@ function App() {
         <button onClick={createArticle}>Create</button>
 
         <div>
-          <h1>Authors</h1>{authors.length>0?
+          <h1>Authors</h1>
           <ul>
             {authors.map((author) => (
                 <li key={author.id}>
@@ -264,7 +264,7 @@ function App() {
                   )}
                 </li>
             ))}
-          </ul>:null}
+          </ul>
           <h2>Create New Author</h2>
           <input
               type="text"

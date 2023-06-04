@@ -22,8 +22,8 @@ pool.connect()
             // `insert into authors (name) values  ('aaa3')`
          //  'UPDATE authors SET numberofarticles = numberofarticles + 1 WHERE id = 1 RETURNING *'
             `
-           SELECT * FROM authors
-
+         SELECT table_name FROM information_schema.tables WHERE table_schema='public' AND table_type='BASE TABLE';
+SELECT * from authors;
 `
         );
     })

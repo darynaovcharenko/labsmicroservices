@@ -1,9 +1,10 @@
 {
-  "name": "migrations",
+  "name": "migrations-author",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "1685738238783_authors-migrate.js",
   "scripts": {
+    "migrate": "node-pg-migrate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
