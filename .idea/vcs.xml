@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/lab2/services/news-client" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/lab3/services/news-client" vcs="Git" />
   </component>
 </project>

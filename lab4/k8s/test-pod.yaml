@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: istio-test
+spec:
+  containers:
+    - name: istio-test
+      image: daryna04/test-service:lab4
+      imagePullPolicy: Always
+      env:
+        - name: URL
+          value: "http://authors-service:80/authors/"
+        - name: NUM_REQUESTS
+          value: "10"
