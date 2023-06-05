@@ -32,7 +32,7 @@ const numRequests = process.env.NUM_REQUESTS;
 
 app.use(cors());
 
-
+// Endpoint for a slow test
 app.get('/test/slow-test', (req, res) => {
     sendRequests(url, numRequests)
         .then((data) => {
@@ -41,7 +41,7 @@ app.get('/test/slow-test', (req, res) => {
         })
         .catch((error) => console.error('Error:', error));
 })
-
+// Endpoint for breaking a pod
 app.get('/test/break-pod', (req, res) => {
     sendRequests(url, numRequests)
         .then((data) => {
@@ -50,7 +50,7 @@ app.get('/test/break-pod', (req, res) => {
         })
         .catch((error) => console.error('Error:', error));
 })
-
+//  listen on port 8081
 let server = app.listen(8081, () => {
     console.log('Server listening on port 8081');
 });
