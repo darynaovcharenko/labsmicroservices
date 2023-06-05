@@ -27,8 +27,7 @@ async function sendRequests(url, numRequests) {
     return [averageResponseTime, response]
 }
 
-// Usage: node server.js
-const url = process.env.URL; // Replace with your desired URL
+const url = process.env.URL; 
 const numRequests = process.env.NUM_REQUESTS;
 
 app.use(cors());
