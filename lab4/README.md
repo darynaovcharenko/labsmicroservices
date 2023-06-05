@@ -23,7 +23,7 @@ helm dep build helm/v5/charts/service1
 
 helm dep build helm/v5/charts/service2 (+новий сервіс)
 
-
+Також налаштовано retry-timeout та circuit-breaker
 ## Робота з сервісами(файли конфігурацій знаходяться в папці k8s/istio) 
 ```bash
 helm install lab405 v5
