@@ -4,7 +4,7 @@
 
 Також було встановлено istio
 
-Встановлення:
+## Встановлення:
 
 kubectl create namespace istio-system
 
@@ -15,7 +15,7 @@ helm install istiod istio/istiod -n istio-system --wait
 kubectl label namespace default istio-injection=enabled
 
 
-З минулої лабораторної 
+## З минулої лабораторної 
 
 helm dep build helm/v5/charts/client
 
@@ -24,7 +24,7 @@ helm dep build helm/v5/charts/service1
 helm dep build helm/v5/charts/service2 (+новий сервіс)
 
 
-Робота з сервісами(файли конфігурацій знаходяться в папці k8s/istio) 
+## Робота з сервісами(файли конфігурацій знаходяться в папці k8s/istio) 
 
 helm install lab405 v5
 
