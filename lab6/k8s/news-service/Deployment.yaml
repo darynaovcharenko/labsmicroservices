@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: news-node-app
+  template:
+    metadata:
+      labels:
+        app: news-node-app
+    spec:
+      initContainers:
+        - name: run-migrations
+          image: daryna04/news-migrations:lab2
+          imagePullPolicy: Always
+          command: ["./node_modules/.bin/node-pg-migrate", "up","--no-check-order"] # CLI команда запуску міграцій, де $(POSTGRESQL_URL) і $(VERSION) змінні середовища
+          env:
+            - name: DATABASE_URL
+              value: "postgres://demo:demo@postgres:5432/demo"
+
+      containers:
+        - image: daryna04/news-service:lab2
+          imagePullPolicy: Always
+          name: news-node-app
+          ports:
+            - containerPort: 8080
