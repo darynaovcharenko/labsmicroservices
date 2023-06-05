@@ -5,7 +5,7 @@
 Також було встановлено istio
 
 ## Встановлення:
-
+```bash
 kubectl create namespace istio-system
 
 helm install istio-base istio/base -n istio-system
@@ -13,7 +13,7 @@ helm install istio-base istio/base -n istio-system
 helm install istiod istio/istiod -n istio-system --wait
 
 kubectl label namespace default istio-injection=enabled
-
+```
 
 ## З минулої лабораторної 
 
