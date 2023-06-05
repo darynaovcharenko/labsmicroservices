@@ -25,7 +25,7 @@ helm dep build helm/v5/charts/service2 (+новий сервіс)
 
 
 ## Робота з сервісами(файли конфігурацій знаходяться в папці k8s/istio) 
-
+```bash
 helm install lab405 v5
 
 kubectl apply -f author-braker.yaml
@@ -35,4 +35,4 @@ kubectl apply f author-retry.yaml
 kubectl apply -f  test-pod.yaml 
 
 kubectl port-forward pod/istio-test 8081
-
+```
