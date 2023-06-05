@@ -1,0 +1,32 @@
+image:
+  dockerNamespace: daryna04/
+  name: authors-service
+  tag: lab6
+
+replicaCount: 1
+scrapePath: /authors/metrics
+migrations:
+  image:
+    dockerNamespace: daryna04/
+    name: authors-migrations
+    tag: lab4
+  config:
+    DATABASE_URL: "postgres://demo:demo@postgres:5432/demo"
+
+configs:
+  POSTGRES_DB: demo
+  POSTGRES_HOST: postgres
+
+secrets:
+  POSTGRES_USER: "ZGVtbw=="
+  POSTGRES_PASSWORD: "ZGVtbw=="
+
+service:
+  ports:
+    - name: http
+      port: 80
+      containerPort: 8080
+
+ingress:
+  path: /authors
+  port: http
