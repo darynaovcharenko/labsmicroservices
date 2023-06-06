@@ -30,6 +30,7 @@ kubectl create namespace monitoring
 kubectl port-forward prometheus-deployment 9090 -n monitoring 
 ```
 authors/metrics
+
 ![Screenshot from 2023-06-05 21-48-12](https://github.com/darynaovcharenko/labsmicroservices/assets/87266279/1eeb7f3d-b23d-40ab-8223-f88b22e60136)
 
 ![Screenshot from 2023-06-05 20-11-37](https://github.com/darynaovcharenko/labsmicroservices/assets/87266279/fb2c95ac-bf2a-430a-aef8-520958e6f583)
